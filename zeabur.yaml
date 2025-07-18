@@ -1,0 +1,10 @@
+name: uptime-kuma
+type: node
+install:
+  command: npm install
+build:
+  command: npm run build
+start:
+  command: node server/server.js
+env:
+  PORT: 3001
