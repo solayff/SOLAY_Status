@@ -1,14 +1,47 @@
-# Simple docker-compose.yml
-# You can change your port or volume location
-
-version: '3.3'
-
-services:
-  uptime-kuma:
-    image: louislam/uptime-kuma:1
-    container_name: uptime-kuma
-    volumes:
-      - ./uptime-kuma-data:/app/data
-    ports:
-      - 3001:3001  # <Host Port>:<Container Port>
-    restart: always
+# yaml-language-server: $schema=https://schema.zeabur.app/template.json
+apiVersion: zeabur.com/v1
+kind: Template
+metadata:
+    name: Uptime-Kuma
+spec:
+    description: An easy-to-use self-hosted monitoring tool.
+    icon: https://github.com/louislam/uptime-kuma/raw/master/public/icon.svg
+    tags:
+        - Monitoring
+    readme: |-
+        # Uptime Kuma
+        [Uptime Kuma](https://github.com/louislam/uptime-kuma) is an easy-to-use self-hosted monitoring tool
+    services:
+        - name: Uptime-Kuma
+          icon: https://github.com/louislam/uptime-kuma/raw/master/public/icon.svg
+          template: PREBUILT
+          spec:
+            source:
+                image: louislam/uptime-kuma:1
+            ports:
+                - id: web
+                  port: 3001
+                  type: HTTP
+            volumes:
+                - id: data
+                  dir: /app/data
+localization:
+    es-ES:
+        description: Una herramienta de monitoreo autoalojada fácil de usar.
+        readme: |-
+            # Uptime Kuma
+            [Uptime Kuma](https://github.com/louislam/uptime-kuma) es una herramienta de monitoreo autoalojada fácil de usar
+    ja-JP:
+        description: 使いやすいセルフホスト型の監視ツール。
+        readme: |
+            # Uptime Kuma
+            [Uptime Kuma](https://github.com/louislam/uptime-kuma) は使いやすいセルフホスト型の監視ツールです
+    zh-CN:
+        description: 一个易于使用的自托管监控工具。
+        readme: |
+            # Uptime Kuma
+            [Uptime Kuma](https://github.com/louislam/uptime-kuma) 是一个易于使用的自托管监控工具
+    zh-TW:
+        readme: |
+            # Uptime Kuma
+            [Uptime Kuma](https://github.com/louislam/uptime-kuma) 是一個易於使用的自託管監控工具
