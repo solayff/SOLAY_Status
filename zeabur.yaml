@@ -7,4 +7,4 @@ build:
 start:
   command: node server/server.js
 env:
-  PORT: 8080
+  PORT: 3001
