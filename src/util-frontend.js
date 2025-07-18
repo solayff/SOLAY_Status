@@ -75,7 +75,7 @@ export function getResBaseURL() {
     if (env === "development" && isDevContainer()) {
         return location.protocol + "//" + getDevContainerServerHostname();
     } else if (env === "development" || localStorage.dev === "dev") {
-        return location.protocol + "//" + location.hostname + ":3001";
+        return location.protocol + "//" + location.hostname + ":8080";
     } else {
         return "";
     }
@@ -95,7 +95,7 @@ export function getDevContainerServerHostname() {
     }
 
     // eslint-disable-next-line no-undef
-    return CODESPACE_NAME + "-3001." + GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN;
+    return CODESPACE_NAME + "-8080." + GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN;
 }
 
 /**
