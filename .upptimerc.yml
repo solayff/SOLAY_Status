@@ -17,7 +17,7 @@ sites:
     expectedStatusCodes:
       - 200
 
-  - name: FiveM Server
+  - name: Fivem Server
     slug: fivem-server
     url: https://solayf.com/fivem
 
