@@ -31,6 +31,9 @@ status-website:
   introTitle: "**SOLAY** — Status Page"
   introMessage: "Real-time status for SOLAY websites, bots, and game servers."
   # themeUrl: https://status.solayf.com/solay.css?v=3
+  links:
+    - rel: stylesheet
+      href: /solay.css?v=5
   favicon: https://status.solayf.com/favicon.ico
   faviconSvg: https://status.solayf.com/favicon.ico
   navbar:
