@@ -1,0 +1,82 @@
+/* ==============
+   SOLAY custom theme (Atlassian-like)
+   ============== */
+
+/* ألوان أساسية */
+:root {
+  /* ألوان عامة */
+  --body-background-color: #ffffff;
+  --body-text-color: #172B4D;   /* Atlassian Ink */
+  --muted-text-color: #6B778C;
+
+  /* النافبار */
+  --nav-background-color: #ffffff;
+  --nav-text-color: #172B4D;
+  --nav-border-bottom-color: #DFE1E6;
+
+  /* البطاقات */
+  --card-background-color: #ffffff;
+  --card-text-color: #172B4D;
+  --card-border-color: #DFE1E6;
+
+  /* ألوان الحالة (مشابهة لستاتس بيج) */
+  --color-success: #36B37E;  /* Operational */
+  --color-warning: #FFAB00;  /* Degraded */
+  --color-danger:  #FF5630;  /* Major outage */
+  --color-info:    #0052CC;  /* Atlassian blue */
+
+  /* لون الروابط / الـaccent */
+  --accent-color: #0052CC;
+
+  /* خطوط */
+  --font-sans: "Inter", "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+}
+
+/* RTL تحكم اختياري (لو تبغى واجهة عربية كاملة) */
+html { direction: rtl; }
+body { text-align: right; font-family: var(--font-sans); }
+
+/* شريط أعلى الصفحة / النافبار */
+.header, .navbar, nav {
+  background: var(--nav-background-color) !important;
+  color: var(--nav-text-color) !important;
+  border-bottom: 1px solid var(--nav-border-bottom-color) !important;
+  box-shadow: 0 2px 12px rgba(9, 30, 66, 0.08) !important;
+}
+
+/* الحاويات والبطاقات */
+.container, main { max-width: 1100px !important; }
+.card, .box, .panel, .incident, .monitor, .history {
+  background: var(--card-background-color) !important;
+  color: var(--card-text-color) !important;
+  border: 1px solid var(--card-border-color) !important;
+  border-radius: 8px !important;
+}
+
+/* أزرار وروابط */
+a { color: var(--accent-color); }
+button, .btn, .status-badge {
+  border-radius: 6px !important;
+}
+
+/* بانر الأعطال */
+.incident, .incident-banner {
+  border-left: 4px solid var(--color-danger) !important;
+}
+
+/* ألوان بادجات الحالة */
+.status-up      { background: var(--color-success) !important; }
+.status-degraded{ background: var(--color-warning) !important; }
+.status-down    { background: var(--color-danger)  !important; }
+.status-info    { background: var(--color-info)    !important; }
+
+/* ترويسة العناوين والمسافات */
+h1,h2,h3 { color: #172B4D; letter-spacing: -.015em; }
+section { margin-block: 20px; }
+
+/* كروت الخدمات */
+.monitor .title { font-weight: 600; }
+.monitor .meta  { color: var(--muted-text-color); }
+
+/* فوتر أخف */
+footer { color: var(--muted-text-color); }

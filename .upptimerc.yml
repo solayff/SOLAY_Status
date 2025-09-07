@@ -30,11 +30,12 @@ status-website:
   name: SOLAY Status
   introTitle: "**SOLAY** — صفحة حالة الخدمات"
   introMessage: "تابع من هنا حالة البوتات، الداشبورد، الموقع وسيرفرات SOLAY."
+  themeUrl: assets/solay.css
   navbar:
     - title: Status
       href: /
-    - title: GitHub
-      href: https://github.com/solayff/SOLAY_Status
+    - title: Home
+      href: https://solayf.com
 
 # Upptime also supports notifications, assigning issues, and more
 # See https://upptime.js.org/docs/configuration
