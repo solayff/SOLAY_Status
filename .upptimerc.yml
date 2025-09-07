@@ -30,7 +30,7 @@ status-website:
   name: SOLAY Status
   introTitle: "**SOLAY** — صفحة حالة الخدمات"
   introMessage: "تابع من هنا حالة البوتات، الداشبورد، الموقع وسيرفرات SOLAY."
-  themeUrl: assets/solay.css?v=1
+  themeUrl: assets/solay.css?v=3
   navbar:
     - title: Status
       href: /
