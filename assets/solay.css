@@ -1,9 +1,8 @@
-/* ===== SOLAY Status – Dark Glass Theme (no forced dir) ===== */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
 :root{
   color-scheme: dark;
-  --bg-start:#0A0F1A;  /* طابق ألوان موقعك لو حبيت */
+  --bg-start:#0A0F1A;
   --bg-end:#0F1826;
   --text:#E6EAF2;
   --muted:#9AA5B1;
@@ -15,7 +14,6 @@
   --ok:#22c55e; --warn:#f59e0b; --down:#ef4444; --info:#60a5fa; --maint:#64748b;
 }
 
-/* حسم الخلفية البيضاء مهما كان ترتيب التحميل */
 html, body{
   background: linear-gradient(180deg,var(--bg-start),var(--bg-end)) fixed !important;
   background-color: var(--bg-start) !important;
@@ -25,13 +23,11 @@ html, body{
   min-height: 100%;
 }
 
-/* أحيانًا Bulma تضيف خلفيات بيضا على عناصر كبيرة */
 main, .main, .section, .container, .content, .columns, .column, .hero{
   background: transparent !important;
   color: var(--text) !important;
 }
 
-/* هيدر زجاجي */
 header, .navbar, nav, .header{
   position: sticky; top: 0; z-index: 50;
   background: var(--glass-bg) !important;
@@ -43,7 +39,6 @@ header, .navbar, nav, .header{
 .navbar a, .navbar .navbar-item{ color: var(--text) !important; opacity:.9 }
 .navbar a:hover{ opacity:1 }
 
-/* بطاقات زجاجية موحّدة */
 .box, .panel, .card, .tile, .message, .monitor, .history, .incident, .hero{
   background: var(--glass-bg) !important;
   border: 1px solid var(--glass-border) !important;
@@ -54,11 +49,9 @@ header, .navbar, nav, .header{
 }
 .card-header, .message-header{ background: transparent !important; border-bottom: 1px solid var(--glass-border) !important; }
 
-/* عناوين ونصوص */
 h1,h2,h3{ color: var(--text) !important; letter-spacing: -.015em }
 .subtitle, .has-text-grey, small{ color: var(--muted) !important }
 
-/* روابط وأزرار */
 a{ color: var(--accent) }
 a:hover{ opacity:.9 }
 .button, .btn, .tag.is-link{
@@ -68,7 +61,6 @@ a:hover{ opacity:.9 }
 }
 .button.is-light, .button.is-white{ background: var(--glass-bg) !important; color: var(--text) !important; }
 
-/* بادجات الحالة (حبّات) */
 .status, .status-badge, .tag, .badge{
   border-radius: 999px !important; padding: .35rem .7rem; font-weight: 600;
   border: 1px solid var(--glass-border) !important;
@@ -79,18 +71,50 @@ a:hover{ opacity:.9 }
 .status-info, .is-info       { background: color-mix(in srgb, var(--info) 22%, transparent) !important; color: var(--info) !important; }
 .status-maintenance          { background: color-mix(in srgb, var(--maint)22%, transparent) !important; color: var(--maint) !important; }
 
-/* الرسوم/الصور */
 img, .chart, .graph, .graphs, .response-time, .uptime{
   filter: drop-shadow(0 6px 20px rgba(0,0,0,.35));
   border-radius: 10px !important;
   background: transparent !important;
 }
 
-/* بانر الأعطال */
+.graphs img,
+img.graph,
+img.response-time,
+img.uptime,
+.content img {
+  display: block !important;
+  max-width: 100% !important;
+  height: auto !important;
+  opacity: 1 !important;
+  background: transparent !important;
+}
+
 .incident, .incident-banner{ border-inline-start: 4px solid var(--down) !important; }
 
-/* فوتر */
 footer{ color: var(--muted) !important; background: transparent !important; border-top: none !important; }
 
-/* مسافات لطيفة */
 section{ margin-block: 20px; }
+
+/* --- SOLAY: spacing tweaks for intro & cards --- */
+.box, .panel, .card, .tile, .message, .monitor, .history, .incident, .hero{
+  padding: 1.25rem 1.6rem !important;
+}
+
+.hero:first-of-type,
+.hero .container,
+.hero .content{
+  padding: 1.35rem 1.7rem !important;
+}
+
+.hero .title, h1.title{
+  margin: 0 0 .65rem 0 !important;
+  line-height: 1.15;
+}
+.hero .subtitle, .hero p, .content p{
+  margin: .4rem 0 0 0 !important;
+  line-height: 1.65;
+}
+
+.hero, .box, .panel, .card, .message, .monitor, .history, .incident{
+  margin-block: 18px !important;
+}

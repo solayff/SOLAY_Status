@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>404 · SOLAY Status</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="/solay.css?v=8" />
+  <style>
+    :root { --nav-h: 64px; }
+    body { padding-top: var(--nav-h); }
+    .wrap { max-width: 820px; margin: 0 auto; padding: 0 12px; }
+    .nav {
+      position: sticky; top: 0; z-index: 50;
+      background: var(--glass-bg);
+      backdrop-filter: blur(16px) saturate(130%);
+      -webkit-backdrop-filter: blur(16px) saturate(130%);
+      border-bottom: 1px solid var(--glass-border);
+      box-shadow: var(--glass-shadow);
+    }
+    .nav .inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 10px 14px; }
+    .brand { display: flex; align-items: center; gap: 10px; color: var(--text); font-weight: 700; text-decoration: none; }
+    .brand img { height: 26px; width: auto; }
+    .links a { color: var(--text); opacity: .9; text-decoration: none; margin-inline-start: 14px; }
+    .card404 { margin: 22px auto; padding: 1.6rem !important; text-align: center; }
+    .code { font-size: 3.25rem; font-weight: 800; letter-spacing: -.02em; margin: 0 0 .35rem; }
+    .muted { color: var(--muted); margin: 0 0 1.2rem; }
+    .actions { display: flex; gap: .6rem; justify-content: center; flex-wrap: wrap; }
+    .btn-ghost { background: var(--glass-bg) !important; color: var(--text) !important; }
+    footer { text-align: center; margin: 20px 0; }
+  </style>
+</head>
+<body>
+  <div class="nav">
+    <div class="inner">
+      <a class="brand" href="/">
+        <img src="https://solayf.com/assets/images/logo.png" alt="">
+        <span>SOLAY Status</span>
+      </a>
+      <div class="links">
+        <a href="/">Status</a>
+        <a href="https://solayf.com">Home</a>
+      </div>
+    </div>
+  </div>
+
+  <main class="wrap">
+    <section class="box card404">
+      <div class="code">404</div>
+      <p class="muted">The page you’re looking for doesn’t exist.</p>
+      <div class="actions">
+        <a class="button" href="/">Back to Status</a>
+        <a class="button btn-ghost" href="https://solayf.com">Go to solayf.com</a>
+        <a class="button btn-ghost" href="https://github.com/solayff/SOLAY_Status/issues/new">Report an issue</a>
+      </div>
+    </section>
+
+    <section class="box">
+      <h3>What can you do?</h3>
+      <ul>
+        <li>Check the URL for typos.</li>
+        <li>Return to the <a href="/">status homepage</a>.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    <small class="has-text-grey">© SOLAY</small>
+  </footer>
+
+  <script>
+    // setTimeout(() => location.href = "/", 5000);
+  </script>
+</body>
+</html>
