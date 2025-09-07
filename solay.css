@@ -118,4 +118,5 @@ section{ margin-block: 20px; }
 }
 */
 
+#solay-footer { display: block !important; }
 footer.svelte-jbr799 { display: none !important; }
