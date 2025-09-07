@@ -41,7 +41,7 @@ status-website:
       href: https://solayf.com
 
   customFootHtml: |
-    <footer class="container" style="text-align:center;margin:20px auto;">
+    <footer id="solay-footer" class="container" style="text-align:center;margin:20px auto;">
       <small class="has-text-grey">© SOLAY — Status</small>
       <div style="margin-top:8px;">
         <a href="https://solayf.com" class="button btn-ghost">Home</a>
