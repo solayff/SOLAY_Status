@@ -4,19 +4,19 @@
     "url": "https://solayf.com",
     "icon": "https://icons.duckduckgo.com/ip3/solayf.com.ico",
     "slug": "solay-website",
-    "status": "down",
-    "uptime": "99.99%",
-    "uptimeDay": "99.99%",
-    "uptimeWeek": "99.99%",
-    "uptimeMonth": "99.99%",
-    "uptimeYear": "99.99%",
-    "time": 179,
-    "timeDay": 179,
-    "timeWeek": 179,
-    "timeMonth": 179,
-    "timeYear": 179,
+    "status": "up",
+    "uptime": "98.72%",
+    "uptimeDay": "98.72%",
+    "uptimeWeek": "98.72%",
+    "uptimeMonth": "98.72%",
+    "uptimeYear": "98.72%",
+    "time": 611,
+    "timeDay": 611,
+    "timeWeek": 611,
+    "timeMonth": 611,
+    "timeYear": 611,
     "dailyMinutesDown": {
-      "2025-09-07": 0
+      "2025-09-07": 9
     }
   },
   {
@@ -42,19 +42,19 @@
     "url": "https://solayf.com/fivem",
     "icon": "https://icons.duckduckgo.com/ip3/solayf.com.ico",
     "slug": "fivem-server",
-    "status": "down",
-    "uptime": "99.99%",
-    "uptimeDay": "99.99%",
-    "uptimeWeek": "99.99%",
-    "uptimeMonth": "99.99%",
-    "uptimeYear": "99.99%",
-    "time": 123,
-    "timeDay": 123,
-    "timeWeek": 123,
-    "timeMonth": 123,
-    "timeYear": 123,
+    "status": "up",
+    "uptime": "98.72%",
+    "uptimeDay": "98.72%",
+    "uptimeWeek": "98.72%",
+    "uptimeMonth": "98.72%",
+    "uptimeYear": "98.72%",
+    "time": 161,
+    "timeDay": 161,
+    "timeWeek": 161,
+    "timeMonth": 161,
+    "timeYear": 161,
     "dailyMinutesDown": {
-      "2025-09-07": 0
+      "2025-09-07": 9
     }
   }
 ]
