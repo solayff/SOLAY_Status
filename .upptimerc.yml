@@ -31,12 +31,12 @@ status-website:
   introTitle: "**SOLAY** — Status Page"
   introMessage: "Real-time status for SOLAY websites, bots, and game servers."
   theme: dark
-  themeUrl: /solay.css?v=6
+  themeUrl: https://status.solayf.com/solay.css?v=6
   links:
     - rel: stylesheet
-      href: /solay.css?v=5
-  favicon: /favicon.ico
-  faviconSvg: /favicon.ico
+      href: https://status.solayf.com/solay.css?v=5
+  favicon: https://status.solayf.com/favicon.ico
+  faviconSvg: https://status.solayf.com/favicon.ico
   navbar:
     - title: Status
       href: /
