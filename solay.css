@@ -1,114 +1,104 @@
-/* ===== SOLAY Status Theme (dark, glass, Atlassian-like) ===== */
+/* ===== SOLAY Status Theme (dark + glass, no forced direction) ===== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
-/* خطوط مناسبة للعربي */
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Inter:wght@400;600&display=swap');
-
-:root {
-  /* خلفية داكنة مريحة */
-  --bg-start: #0b0f17;
-  --bg-end:   #101826;
+:root{
+  /* خلفية مريحة (عدّلها لو تبي تطابق solayf.com تمامًا) */
+  --bg-start:#0A0F1A;
+  --bg-end:#0F1826;
 
   /* نصوص */
-  --text: #E6EAF2;
-  --muted: #9AA5B1;
+  --text:#E6EAF2;
+  --muted:#9AA5B1;
 
   /* زجاج */
-  --glass-bg: rgba(16, 24, 38, 0.55);
-  --glass-border: rgba(255, 255, 255, 0.08);
-  --glass-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  --glass-bg:rgba(16,24,38,.45);
+  --glass-border:rgba(255,255,255,.08);
+  --glass-shadow:0 10px 30px rgba(0,0,0,.35);
 
-  /* ألوان هوية SOLAY (عدّلها لو تبغى تطابق موقعك بدقة) */
-  --accent: #00D1FF;      /* أزرق سيان */
-  --accent-2: #38BDF8;    /* أزرق فاتح */
-  --link: var(--accent);
+  /* ألوان هويتك */
+  --accent:#00C4E6;   /* primary cyan */
+  --accent-2:#1EA7F7; /* secondary blue */
+  --link:var(--accent);
 
-  /* ألوان الحالة (قريبة من Statuspage/cfx) */
-  --ok:       #22c55e;
-  --warning:  #eab308;
-  --danger:   #ef4444;
-  --info:     #60a5fa;
-  --maint:    #64748b;
+  /* ألوان الحالة (قريبة من cfx/statuspage) */
+  --ok:#22c55e;
+  --warn:#eab308;
+  --down:#ef4444;
+  --info:#60a5fa;
+  --maint:#64748b;
 }
 
-html { direction: rtl; }
-body {
-  font-family: "Cairo", "Inter", "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
-  background: linear-gradient(180deg, var(--bg-start), var(--bg-end)) fixed;
-  color: var(--text);
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
+body{
+  font-family:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  background:linear-gradient(180deg,var(--bg-start),var(--bg-end)) fixed;
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+  margin:0;
 }
 
-/* رأس زجاجي */
-header, .navbar, nav, .header {
-  position: sticky; top: 0; z-index: 50;
-  background: var(--glass-bg) !important;
-  backdrop-filter: blur(14px) saturate(120%);
-  -webkit-backdrop-filter: blur(14px) saturate(120%);
-  border-bottom: 1px solid var(--glass-border) !important;
-  box-shadow: var(--glass-shadow);
+/* هيدر زجاجي */
+header,.navbar,nav,.header{
+  position:sticky;top:0;z-index:50;
+  background:var(--glass-bg)!important;
+  backdrop-filter:blur(16px) saturate(130%);
+  -webkit-backdrop-filter:blur(16px) saturate(130%);
+  border-bottom:1px solid var(--glass-border)!important;
+  box-shadow:var(--glass-shadow);
 }
 
-/* روابط */
-a { color: var(--link); }
-a:hover { opacity: .9; }
+/* حاوية */
+.container,main,.section{max-width:1100px;margin-inline:auto}
 
-/* الحاويات */
-.container, main, .section { max-width: 1100px; margin-inline: auto; }
-
-/* صناديق/كروت زجاجية */
-.box, .panel, .card, .monitor, .history, .incident, .message, .hero {
-  background: var(--glass-bg) !important;
-  border: 1px solid var(--glass-border) !important;
-  border-radius: 14px !important;
-  box-shadow: var(--glass-shadow);
-  color: var(--text);
+/* كروت زجاجية */
+.box,.panel,.card,.monitor,.history,.incident,.message,.hero{
+  background:var(--glass-bg)!important;
+  border:1px solid var(--glass-border)!important;
+  border-radius:14px!important;
+  box-shadow:var(--glass-shadow);
+  color:var(--text);
+  padding:1rem 1.2rem;
 }
 
 /* عناوين ونص ثانوي */
-h1,h2,h3 { color: var(--text); letter-spacing: -.015em; }
-.meta, .subtitle, small, .has-text-grey { color: var(--muted) !important; }
+h1,h2,h3{color:var(--text);letter-spacing:-.015em}
+.meta,.subtitle,small,.has-text-grey{color:var(--muted)!important}
 
-/* بادجات الحالة (شكل حبوب) */
-.status, .status-badge, .tag, .badge {
-  border-radius: 999px !important;
-  padding: .35rem .7rem;
-  font-weight: 600;
-  border: 1px solid var(--glass-border);
+/* روابط وأزرار */
+a{color:var(--link);text-decoration:none}
+a:hover{opacity:.9}
+.button,.btn{
+  background:linear-gradient(180deg,
+    color-mix(in srgb,var(--accent) 35%,transparent),
+    color-mix(in srgb,var(--accent-2) 30%,transparent));
+  border:1px solid var(--glass-border);
+  color:#e6faff;border-radius:10px
 }
-.status-up, .is-success  { background: color-mix(in srgb, var(--ok) 22%, transparent);     color: var(--ok) !important; }
-.status-degraded, .is-warning { background: color-mix(in srgb, var(--warning) 22%, transparent); color: var(--warning) !important; }
-.status-down, .is-danger  { background: color-mix(in srgb, var(--danger) 22%, transparent);    color: var(--danger) !important; }
-.status-info, .is-info    { background: color-mix(in srgb, var(--info) 22%, transparent);      color: var(--info) !important; }
-.status-maintenance       { background: color-mix(in srgb, var(--maint) 22%, transparent);     color: var(--maint) !important; }
+.button:hover,.btn:hover{transform:translateY(-1px)}
 
-/* أزرار */
-.button, .btn {
-  background: linear-gradient(180deg, color-mix(in srgb, var(--accent) 35%, transparent), color-mix(in srgb, var(--accent-2) 30%, transparent));
-  border: 1px solid var(--glass-border);
-  color: #e6faff;
-  border-radius: 10px;
+/* بادجات الحالة */
+.status,.status-badge,.tag,.badge{
+  border-radius:999px!important;
+  padding:.35rem .7rem;font-weight:600;
+  border:1px solid var(--glass-border)
 }
-.button:hover, .btn:hover { transform: translateY(-1px); }
+.status-up,.is-success{background:color-mix(in srgb,var(--ok) 22%,transparent);color:var(--ok)!important}
+.status-degraded,.is-warning{background:color-mix(in srgb,var(--warn) 22%,transparent);color:var(--warn)!important}
+.status-down,.is-danger{background:color-mix(in srgb,var(--down) 22%,transparent);color:var(--down)!important}
+.status-info,.is-info{background:color-mix(in srgb,var(--info) 22%,transparent);color:var(--info)!important}
+.status-maintenance{background:color-mix(in srgb,var(--maint) 22%,transparent);color:var(--maint)!important}
 
-/* جداول/قوائم المونترات */
-.monitor .title { font-weight: 700; }
-.monitor .meta { color: var(--muted) !important; }
-.monitor, .history { padding: 1rem 1.2rem; }
-
-/* صور الرسوم (PNG) */
-img, .chart, .graph, .graphs, .response-time, .uptime {
-  filter: drop-shadow(0 6px 20px rgba(0,0,0,.35));
-  border-radius: 10px;
+/* الرسوم والصور */
+img,.chart,.graph,.graphs,.response-time,.uptime{
+  filter:drop-shadow(0 6px 20px rgba(0,0,0,.35));
+  border-radius:10px
 }
 
-/* إنفوبانر أعطال */
-.incident, .incident-banner {
-  border-inline-start: 4px solid var(--danger) !important;
-}
+/* بانر الأعطال */
+.incident,.incident-banner{border-inline-start:4px solid var(--down)!important}
 
-/* فوتر بسيط */
-footer { color: var(--muted); background: transparent !important; border-top: none !important; }
+/* فوتر */
+footer{color:var(--muted);background:transparent!important;border-top:none!important}
 
-/* تحسينات RTL طفيفة */
-ul, ol { padding-inline-start: 1.2rem; }
+/* تحسين مسافات خفيفة */
+section{margin-block:20px}
