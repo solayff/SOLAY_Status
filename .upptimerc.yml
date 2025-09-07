@@ -31,10 +31,7 @@ status-website:
   introTitle: "**SOLAY** — Status Page"
   introMessage: "Real-time status for SOLAY websites, bots, and game servers."
   theme: dark
-  themeUrl: https://status.solayf.com/solay.css?v=6
-  links:
-    - rel: stylesheet
-      href: https://status.solayf.com/solay.css?v=5
+  themeUrl: https://status.solayf.com/solay.css?v=7
   favicon: https://status.solayf.com/favicon.ico
   faviconSvg: https://status.solayf.com/favicon.ico
   navbar:
@@ -42,6 +39,14 @@ status-website:
       href: /
     - title: Home
       href: https://solayf.com
+
+  customFootHtml: |
+    <footer class="container" style="text-align:center;margin:20px auto;">
+      <small class="has-text-grey">© SOLAY — Status</small>
+      <div style="margin-top:8px;">
+        <a href="https://solayf.com" class="button btn-ghost">Home</a>
+      </div>
+    </footer>
 
 # Upptime also supports notifications, assigning issues, and more
 # See https://upptime.js.org/docs/configuration
