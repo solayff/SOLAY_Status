@@ -1,0 +1,40 @@
+# Change these first
+owner: solayff # Your GitHub organization or username, where this repository lives
+repo: SOLAY_Status # The name of this repository
+
+sites:
+  - name: SOLAY Website
+    slug: solay-website
+    url: https://solayf.com
+
+  - name: SOLAY Games
+    slug: solay-games
+    url: https://sogames.solayf.com/api/health
+    method: GET
+    headers:
+      - "Accept: application/json"
+      - "User-Agent: Mozilla/5.0"
+    expectedStatusCodes:
+      - 200
+
+  - name: FiveM Server
+    slug: fivem-server
+    url: https://solayf.com/fivem
+
+status-website:
+  # Add your custom domain name, or remove the `cname` line if you don't have a domain
+  # Uncomment the `baseUrl` line if you don't have a custom domain and add your repo name there
+  cname: status.solayf.com
+  # baseUrl: /your-repo-name
+  logoUrl: https://solayf.com/assets/images/logo.png
+  name: SOLAY Status
+  introTitle: "**SOLAY** — صفحة حالة الخدمات"
+  introMessage: "تابع من هنا حالة البوتات، الداشبورد، الموقع وسيرفرات SOLAY."
+  navbar:
+    - title: Status
+      href: /
+    - title: GitHub
+      href: https://github.com/solayff/SOLAY_Status
+
+# Upptime also supports notifications, assigning issues, and more
+# See https://upptime.js.org/docs/configuration
