@@ -31,17 +31,17 @@
     "url": "https://sogames.solayf.com/api/health",
     "icon": "https://icons.duckduckgo.com/ip3/sogames.solayf.com.ico",
     "slug": "solay-games",
-    "status": "up",
+    "status": "down",
     "uptime": "99.98%",
     "uptimeDay": "100.00%",
     "uptimeWeek": "100.00%",
     "uptimeMonth": "99.98%",
     "uptimeYear": "99.98%",
-    "time": 585,
-    "timeDay": 515,
-    "timeWeek": 579,
-    "timeMonth": 585,
-    "timeYear": 585,
+    "time": 1259,
+    "timeDay": 9993,
+    "timeWeek": 2940,
+    "timeMonth": 1259,
+    "timeYear": 1259,
     "dailyMinutesDown": {
       "2025-09-14": 8
     }
