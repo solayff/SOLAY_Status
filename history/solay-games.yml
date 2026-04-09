@@ -1,7 +1,7 @@
 url: https://sogames.solayf.com/api/health
-status: down
-code: 0
-responseTime: 0
-lastUpdated: 2026-04-09T16:01:25.066Z
+status: up
+code: 200
+responseTime: 543
+lastUpdated: 2026-04-09T17:11:57.128Z
 startTime: 2025-09-07T08:36:29.609Z
 generator: Upptime <https://github.com/upptime/upptime>
